@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-jenkins",
+  "version": "1.0.0",
+  "description": "This is a basic NodeJS project to test with Jenkins",
+  "main": "helloWorld.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jersonlopez/nodejs-jenkins.git"
+  },
+  "keywords": [
+    "jenkins",
+    "nodejs"
+  ],
+  "author": "jersonlopez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jersonlopez/nodejs-jenkins/issues"
+  },
+  "homepage": "https://github.com/jersonlopez/nodejs-jenkins#readme"
+}
