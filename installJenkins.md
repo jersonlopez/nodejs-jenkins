@@ -1,5 +1,11 @@
 # How to run Jenkins in local
 
+> Before to install **Jenkins** locally, you must have docker installed in your computer, to install it just visit the [official webpage](https://docs.docker.com/desktop/).
+
+---
+
+Now, you are ready to install Jenkins locally, please follow the next steps to do it:
+
 1. You should create a docker container running the following command:
 
     ```sh
@@ -13,7 +19,7 @@
     - p: assign port target
     - name: name of the container
 
-    ==Important:== The argument `-v jenkins_home:/var/jenkins_home` creates a volume called `jenkins_home` if it does not already exist and mounts it under the path `/var/jenkins_home` inside the container. You'll notice that I am using port 8082 instead of the default 8080. The reason, other than demonstrating that you can use other ports, is that port 8080 is used by some web frameworks.
+    > **Important:** The argument `-v jenkins_home:/var/jenkins_home` creates a volume called `jenkins_home` if it does not already exist and mounts it under the path `/var/jenkins_home` inside the container. You'll notice that I am using port 8082 instead of the default 8080. The reason, other than demonstrating that you can use other ports, is that port 8080 is used by some web frameworks.
 
     If you run `docker ps`, you should see your docker container running
 
@@ -23,11 +29,15 @@
 
     ![unlock_jenkins](/images/01_unlock_jenkins.png)
 
+    ---
+
 2. Once in the browser, the initial admin password will be required to complete the Jenkins setup, which you can obtain by running the following command:
 
     ```sh
     docker exec jenkins-local sh -c "cat /var/jenkins_home/secrets/initialAdminPassword"
     ```
+
+    ---
 
 3. After copy the password and paste it on the webpage to unlock Jenkins. Click on Install suggested plugins on the Customize Jenkins page.
 
@@ -45,4 +55,4 @@
 
     ![welcome_jenkins](/images/05_welcome_jenkins.png)
 
-To run your first example project visit this [link](./jenkinsExampleProject.md)
+To run your first example project visit this [link](./jenkinsExampleProject.md).

@@ -1,14 +1,22 @@
 # How to run NodeJS job in Jenkins
 
+> **Important:** If you don't have a jenkins instance and you want to run jenkins in local you can visit this [link](./installJenkins.md).
+
+Now, to run a **NodeJS** project in Jenkins please follow the next steps:
+
 1. First of all, you will need to install the **NodeJS plugin** in Jenkins because it just supports java by default. ​​To do this, navigate to ***Manage Jenkins -> Manage Plugins*** and look for *NodeJS* and install the plugin.
 
     ![manage_jenkins](/images/11_manage_jenkins.png)
 
     ![install_nodejs_plugin](/images/12_install_nodejs_plugin.png)
 
+    ---
+
 2. When the installation is completed navigate to Manage ***Jenkins -> Global Tool Configuration*** and look for the **NodeJS** heading. Install whatever version of NodeJS you require and click save:
 
     ![configure_nodejs_version](/images/13_configure_nodejs_version.png)
+
+    ---
 
 3. Now we must create a NodeJS job with npm scripts. Naming the job ***nodejs-project*** and set it to be a ***Freestyle project***:
 
@@ -25,6 +33,8 @@
     Under **Build Environment**, Select the name of the Node installation we just created:
 
     ![set_nodejs_build](/images/17_set_nodejs_build.png)
+
+    > **Important:** If your project uses environment variables you can visit this [link](./envVariables.md) to know how to setting up them.
 
     Now go to the **Build** heading, choose a ***Execute shell*** and add the following:
 
